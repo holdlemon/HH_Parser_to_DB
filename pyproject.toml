@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "hh-parser-to-db"
+version = "0.1.0"
+description = ""
+authors = ["daniil vazhov <d.vajov2010@yandex.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+requests = "^2.32.3"
+
+
+[tool.poetry.group.lint.dependencies]
+flake8 = "^7.1.1"
+mypy = "^1.11.2"
+isort = "^5.13.2"
+black = "^24.8.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+ignore_missing_imports=true
+disallow_untyped_defs=true
+warn_return_any=true
+
+[tool.black]
+line-length = 119
+
+[tool.isort]
+line_length = 119
